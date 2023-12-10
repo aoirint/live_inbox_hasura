@@ -1,0 +1,3 @@
+table:
+  name: niconico_live_programs
+  schema: public
