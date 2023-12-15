@@ -1,0 +1,1 @@
+alter table "public"."niconico_user_broadcast_history_responses" drop constraint "niconico_user_broadcast_history_responses_remote_niconico_us";

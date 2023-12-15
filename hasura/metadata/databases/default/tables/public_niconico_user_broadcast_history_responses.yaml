@@ -1,6 +1,10 @@
 table:
   name: niconico_user_broadcast_history_responses
   schema: public
+object_relationships:
+  - name: niconico_user
+    using:
+      foreign_key_constraint_on: remote_niconico_user_id
 insert_permissions:
   - role: live_inbox_updater
     permission:
