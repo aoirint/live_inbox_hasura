@@ -1,0 +1,3 @@
+-- Could not auto-generate a down migration.
+-- Please write an appropriate down migration for the SQL below:
+-- DROP table "public"."niconico_user_broadcast_history_responses";
