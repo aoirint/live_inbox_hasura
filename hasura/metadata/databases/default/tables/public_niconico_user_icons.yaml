@@ -11,7 +11,7 @@ insert_permissions:
       check: {}
       columns:
         - content_fetched_at
-        - content_status
+        - status
         - niconico_user_id
         - url
         - url_last_fetched_at
@@ -27,7 +27,7 @@ select_permissions:
         - url_last_fetched_at
         - id
         - niconico_user_id
-        - content_status
+        - status
       filter: {}
       allow_aggregations: true
     comment: ""
@@ -36,7 +36,7 @@ update_permissions:
     permission:
       columns:
         - content_fetched_at
-        - content_status
+        - status
         - niconico_user_id
         - url
         - url_last_fetched_at
