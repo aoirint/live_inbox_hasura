@@ -1,3 +1,41 @@
 table:
   name: niconico_user_icons
   schema: public
+insert_permissions:
+  - role: live_inbox_updater
+    permission:
+      check: {}
+      columns:
+        - content_fetched_at
+        - content_status
+        - niconico_user_id
+        - url
+        - url_last_fetched_at
+    comment: ""
+select_permissions:
+  - role: live_inbox_updater
+    permission:
+      columns:
+        - url
+        - content_fetched_at
+        - created_at
+        - updated_at
+        - url_last_fetched_at
+        - id
+        - niconico_user_id
+        - content_status
+      filter: {}
+      allow_aggregations: true
+    comment: ""
+update_permissions:
+  - role: live_inbox_updater
+    permission:
+      columns:
+        - content_fetched_at
+        - content_status
+        - niconico_user_id
+        - url
+        - url_last_fetched_at
+      filter: {}
+      check: null
+    comment: ""
