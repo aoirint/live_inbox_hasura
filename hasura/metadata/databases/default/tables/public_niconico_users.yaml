@@ -17,17 +17,8 @@ select_permissions:
         - enabled
         - id
         - name
-        - niconico_user_icon_id
         - remote_niconico_user_id
         - updated_at
       filter: {}
       allow_aggregations: true
-    comment: ""
-update_permissions:
-  - role: live_inbox_updater
-    permission:
-      columns:
-        - niconico_user_icon_id
-      filter: {}
-      check: null
     comment: ""
