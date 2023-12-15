@@ -1,3 +1,30 @@
 table:
   name: niconico_live_programs
   schema: public
+insert_permissions:
+  - role: live_inbox_updater
+    permission:
+      check: {}
+      columns:
+        - end_time
+        - last_fetch_time
+        - niconico_user_id
+        - remote_niconico_content_id
+        - start_time
+        - status
+        - title
+    comment: ""
+update_permissions:
+  - role: live_inbox_updater
+    permission:
+      columns:
+        - end_time
+        - last_fetch_time
+        - niconico_user_id
+        - remote_niconico_content_id
+        - start_time
+        - status
+        - title
+      filter: {}
+      check: {}
+    comment: ""
