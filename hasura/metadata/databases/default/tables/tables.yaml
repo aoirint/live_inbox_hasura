@@ -1,2 +1,3 @@
 - "!include public_niconico_live_programs.yaml"
+- "!include public_niconico_user_icons.yaml"
 - "!include public_niconico_users.yaml"
