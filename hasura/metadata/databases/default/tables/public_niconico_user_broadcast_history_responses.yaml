@@ -1,0 +1,3 @@
+table:
+  name: niconico_user_broadcast_history_responses
+  schema: public
