@@ -1,3 +1,12 @@
 table:
   name: niconico_user_broadcast_history_responses
   schema: public
+insert_permissions:
+  - role: live_inbox_updater
+    permission:
+      check: {}
+      columns:
+        - remote_niconico_user_id
+        - response_status_code
+        - response_text
+    comment: ""

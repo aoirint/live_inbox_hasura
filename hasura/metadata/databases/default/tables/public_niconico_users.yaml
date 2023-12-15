@@ -1,3 +1,16 @@
 table:
   name: niconico_users
   schema: public
+select_permissions:
+  - role: live_inbox_updater
+    permission:
+      columns:
+        - created_at
+        - enabled
+        - id
+        - name
+        - remote_niconico_user_id
+        - updated_at
+      filter: {}
+      allow_aggregations: true
+    comment: ""
