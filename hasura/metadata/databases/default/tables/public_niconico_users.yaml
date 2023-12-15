@@ -1,6 +1,14 @@
 table:
   name: niconico_users
   schema: public
+array_relationships:
+  - name: niconico_live_programs
+    using:
+      foreign_key_constraint_on:
+        column: niconico_user_id
+        table:
+          name: niconico_live_programs
+          schema: public
 select_permissions:
   - role: live_inbox_updater
     permission:
