@@ -11,14 +11,6 @@ object_relationships:
         remote_table:
           name: niconico_user_icon_caches
           schema: public
-array_relationships:
-  - name: niconico_live_programs
-    using:
-      foreign_key_constraint_on:
-        column: niconico_user_id
-        table:
-          name: niconico_live_programs
-          schema: public
 insert_permissions:
   - role: live_inbox_updater
     permission:

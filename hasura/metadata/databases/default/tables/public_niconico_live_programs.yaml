@@ -1,10 +1,6 @@
 table:
   name: niconico_live_programs
   schema: public
-object_relationships:
-  - name: niconico_user
-    using:
-      foreign_key_constraint_on: niconico_user_id
 insert_permissions:
   - role: live_inbox_updater
     permission:
@@ -12,7 +8,6 @@ insert_permissions:
       columns:
         - end_time
         - last_fetch_time
-        - niconico_user_id
         - remote_niconico_content_id
         - start_time
         - status
@@ -22,16 +17,15 @@ select_permissions:
   - role: live_inbox_updater
     permission:
       columns:
-        - remote_niconico_content_id
-        - status
-        - title
         - created_at
         - end_time
-        - last_fetch_time
-        - start_time
-        - updated_at
         - id
-        - niconico_user_id
+        - last_fetch_time
+        - remote_niconico_content_id
+        - start_time
+        - status
+        - title
+        - updated_at
       filter: {}
       allow_aggregations: true
     comment: ""
@@ -41,7 +35,6 @@ update_permissions:
       columns:
         - end_time
         - last_fetch_time
-        - niconico_user_id
         - remote_niconico_content_id
         - start_time
         - status
