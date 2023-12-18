@@ -1,6 +1,16 @@
 table:
   name: niconico_live_programs
   schema: public
+object_relationships:
+  - name: niconico_user
+    using:
+      manual_configuration:
+        column_mapping:
+          remote_niconico_user_id: remote_niconico_user_id
+        insertion_order: null
+        remote_table:
+          name: niconico_users
+          schema: public
 insert_permissions:
   - role: live_inbox_updater
     permission:
