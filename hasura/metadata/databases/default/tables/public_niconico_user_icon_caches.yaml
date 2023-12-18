@@ -8,7 +8,7 @@ insert_permissions:
       columns:
         - fetched_at
         - hash_md5
-        - size
+        - file_size
         - url
     comment: ""
 select_permissions:
@@ -19,7 +19,7 @@ select_permissions:
         - fetched_at
         - hash_md5
         - id
-        - size
+        - file_size
         - updated_at
         - url
       filter: {}
@@ -31,7 +31,7 @@ update_permissions:
       columns:
         - fetched_at
         - hash_md5
-        - size
+        - file_size
         - url
       filter: {}
       check: null
