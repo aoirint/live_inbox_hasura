@@ -18,6 +18,23 @@ insert_permissions:
         - status
         - title
     comment: ""
+select_permissions:
+  - role: live_inbox_updater
+    permission:
+      columns:
+        - remote_niconico_content_id
+        - status
+        - title
+        - created_at
+        - end_time
+        - last_fetch_time
+        - start_time
+        - updated_at
+        - id
+        - niconico_user_id
+      filter: {}
+      allow_aggregations: true
+    comment: ""
 update_permissions:
   - role: live_inbox_updater
     permission:
@@ -31,4 +48,9 @@ update_permissions:
         - title
       filter: {}
       check: {}
+    comment: ""
+delete_permissions:
+  - role: live_inbox_updater
+    permission:
+      filter: {}
     comment: ""

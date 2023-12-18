@@ -23,6 +23,7 @@ select_permissions:
         - updated_at
         - url
       filter: {}
+      allow_aggregations: true
     comment: ""
 update_permissions:
   - role: live_inbox_updater
