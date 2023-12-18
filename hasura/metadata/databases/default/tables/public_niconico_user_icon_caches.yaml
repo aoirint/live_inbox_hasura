@@ -7,16 +7,36 @@ insert_permissions:
       check: {}
       columns:
         - fetched_at
+        - hash_md5
+        - size
         - url
     comment: ""
 select_permissions:
   - role: live_inbox_updater
     permission:
       columns:
-        - url
         - created_at
         - fetched_at
-        - updated_at
+        - hash_md5
         - id
+        - size
+        - updated_at
+        - url
+      filter: {}
+    comment: ""
+update_permissions:
+  - role: live_inbox_updater
+    permission:
+      columns:
+        - fetched_at
+        - hash_md5
+        - size
+        - url
+      filter: {}
+      check: null
+    comment: ""
+delete_permissions:
+  - role: live_inbox_updater
+    permission:
       filter: {}
     comment: ""
