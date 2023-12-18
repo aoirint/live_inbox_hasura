@@ -9,13 +9,6 @@ array_relationships:
         table:
           name: niconico_live_programs
           schema: public
-  - name: niconico_user_icons
-    using:
-      foreign_key_constraint_on:
-        column: niconico_user_id
-        table:
-          name: niconico_user_icons
-          schema: public
 select_permissions:
   - role: live_inbox_updater
     permission:
