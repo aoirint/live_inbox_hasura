@@ -8,6 +8,7 @@ insert_permissions:
       columns:
         - content_type
         - fetched_at
+        - file_key
         - file_size
         - hash_md5
         - url
@@ -19,6 +20,7 @@ select_permissions:
         - content_type
         - created_at
         - fetched_at
+        - file_key
         - file_size
         - hash_md5
         - id
@@ -33,6 +35,7 @@ update_permissions:
       columns:
         - content_type
         - fetched_at
+        - file_key
         - file_size
         - hash_md5
         - url
