@@ -18,6 +18,8 @@ hasura --project "$PWD/hasura" --envfile "$PWD/.env.production" metadata apply
 
 ## Backup & Restore
 
+For Docker Desktop, remove `sudo`.
+
 ```shell
 mkdir backups
 
