@@ -3,5 +3,11 @@
 ```shell
 sudo docker compose up -d
 
-hasura console --project "$PWD/hasura" --envfile "$PWD/.env" console
+hasura --project "$PWD/hasura" --envfile "$PWD/.env" console
+hasura --project "$PWD/hasura" --envfile "$PWD/.env.production" console
+```
+
+```shell
+hasura --project "$PWD/hasura" --envfile "$PWD/.env.production" migrate apply --all-databases
+hasura --project "$PWD/hasura" --envfile "$PWD/.env.production" metadata apply
 ```
